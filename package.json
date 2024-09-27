@@ -1,0 +1,54 @@
+{
+	"author": "Yash Hemnani",
+	"license": "ISC",
+	"name": "calender_event",
+	"version": "2.0.0",
+	"description": "Package to create ics file",
+	"scripts": {
+		"build": "tsc -p .",
+		"test": "tsc -p . && mocha ./dist/tests/*.js"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "npx pretty-quick --staged && npm run test"
+		}
+	},
+	"main": "./index.js",
+	"types": "./index.d.ts",
+	"dependencies": {
+		"lodash": "^4.17.21",
+		"mimemessage": "^1.0.5",
+		"moment": "^2.29.4",
+		"uuid": "^9.0.0"
+	},
+	"devDependencies": {
+		"@types/chai": "^4.3.4",
+		"@types/lodash": "^4.14.191",
+		"@types/mocha": "^10.0.1",
+		"@types/node": "^18.15.5",
+		"@types/uuid": "^9.0.1",
+		"chai": "^4.3.7",
+		"husky": "^8.0.0",
+		"mocha": "^10.2.0",
+		"pretty-quick": "^3.1.3",
+		"tsc-watch": "^6.0.0",
+		"tsd": "^0.28.0",
+		"typescript": "^4.9.5"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/yashh1402/calenderEvent"
+	},
+	"keywords": [
+		"ical",
+		"icalendar",
+		"ics",
+		"rfc5545"
+	],
+	"files": [
+		"./dist/**/*",
+		"./src/types/**/*",
+		"./index.d.ts",
+		"./index.js"
+	]
+}
